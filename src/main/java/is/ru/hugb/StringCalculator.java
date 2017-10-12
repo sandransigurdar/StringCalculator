@@ -11,9 +11,6 @@ public class StringCalculator {
         	if(num < 0) {
         		throw new IllegalArgumentException("Negatives not allowed:" + num);
         	}
-        	else if(num >= 1000) {
-        		return 0;
-        	}
         	else return num;
         }
         else if(numbers.contains(",") || numbers.contains("\n")) {
@@ -25,7 +22,6 @@ public class StringCalculator {
 
     private static int sum(String[] nums) {
         int sum = 0;
-        int i = 0;
         String minuses = "";
         boolean minusIncluded = false;
         for(String num : nums) {
