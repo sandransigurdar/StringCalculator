@@ -2,14 +2,17 @@ package is.ru.StringCalculator;
 
 public class StringCalculator {
 	
-	public static int Add(String numbers) {
-	    if(numbers.equals("")) {
+public static int Add(String numbers) {
+	if(numbers.equals("")) {
             return 0;
         }
         else if(!numbers.contains(",") && !numbers.contains("\n")) {
         	int num = Integer.parseInt(numbers);
         	if(num < 0) {
         		throw new IllegalArgumentException("Negatives not allowed:" + num);
+        	}
+        	else if(num >= 1000) {
+        		return 0;
         	}
         	else return num;
         }
@@ -31,6 +34,9 @@ public class StringCalculator {
         		minuses += num;
         	}
         	else {
+        		if(no >= 1000) {
+        			no = 0;
+        		}
         		sum += no;
         	}
         }
@@ -39,4 +45,5 @@ public class StringCalculator {
         }
         return sum;
     }
+    
 }
