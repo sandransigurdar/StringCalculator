@@ -10,4 +10,10 @@ public class StringCalculatorTest {
 		StringCalculator s = new StringCalculator();
 		assertEquals(0, s.Add(""));
 	}
+
+	@Test
+	public void testOneNumber() {
+		StringCalculator s = new StringCalculator();
+		assertEquals(2, s.Add("2"));
+	}
 }
