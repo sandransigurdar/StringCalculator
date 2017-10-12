@@ -24,4 +24,9 @@ public class StringCalculatorTest {
     public void testAddmultiple() {
         assertEquals(8, StringCalculator.Add("2,2,2,2"));
     }
+
+    @Test 
+    public void testAddEnterComma() {
+    	assertEquals(6, StringCalculator.Add("1\n2,3"));
+    }
 }
