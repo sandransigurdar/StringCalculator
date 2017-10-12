@@ -32,13 +32,10 @@ public class StringCalculatorTest {
 
     @Test
     public void testNegatives() {
-    	//RuntimeException e = null;
-    	//ExpectedException thrown = null;
     	try {
     		StringCalculator.Add("-1,2");
-    	 	//assertEquals("Negatives not allowed: -1", StringCalculator.Add("-1"))
     	}
-    	catch(RuntimeException e){
+    	catch(IllegalArgumentException e){
     		assertEquals("Negatives not allowed: -1", e.getMessage());
     	}
     }
