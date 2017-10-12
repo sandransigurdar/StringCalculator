@@ -9,9 +9,12 @@ public class StringCalculator {
         else if(!numbers.contains(",") && !numbers.contains("\n")) {
         	int num = Integer.parseInt(numbers);
         	if(num < 0) {
-        		throw new IllegalArgumentException("Negatives not allowed: " + num);
+        		throw new IllegalArgumentException("Negatives not allowed:" + num);
         	}
-            else return num;
+        	else if(num >= 1000) {
+        		return 0;
+        	}
+        	else return num;
         }
         else if(numbers.contains(",") || numbers.contains("\n")) {
             String nums[] = numbers.split(",|\n");
@@ -23,12 +26,20 @@ public class StringCalculator {
     private static int sum(String[] nums) {
         int sum = 0;
         int i = 0;
+        String minuses = "";
+        boolean minusIncluded = false;
         for(String num : nums) {
-        	int no = Integer.parseInt(num);
-            sum += no;
-            if(no < 0) {
-            	throw new IllegalArgumentException("Negatives not allowed: " + no);
-            }
+        	int no = Integer.parseInt(num);	
+        	if(num.contains("-")) {        		
+        		minusIncluded = true;
+        		minuses += num;
+        	}
+        	else {
+        		sum += no;
+        	}
+        }
+        if(minusIncluded == true) {
+        		throw new IllegalArgumentException("Negatives not allowed: " + minuses);
         }
         return sum;
     }
