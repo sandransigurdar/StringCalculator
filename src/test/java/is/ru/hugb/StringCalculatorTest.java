@@ -1,4 +1,4 @@
-package is.ru.hugb;
+package is.ru.StringCalculator;
 
 import static org.junit.Assert.assertEquals;
 import org.junit.Test;
@@ -7,13 +7,11 @@ public class StringCalculatorTest {
 
 	@Test
 	public void testEmptyStrResultZero() {
-		StringCalculator s = new StringCalculator();
-		assertEquals(0, s.Add(""));
+		assertEquals(0, StringCalculator.Add(""));
 	}
 
 	@Test
 	public void testOneNumber() {
-		StringCalculator s = new StringCalculator();
-		assertEquals(2, s.Add("2"));
+		assertEquals(2, StringCalculator.Add("2"));
 	}
 }

@@ -1,8 +1,8 @@
-package is.ru.hugb;
+package is.ru.StringCalculator;
 
 public class StringCalculator {
 	
-	public int Add(String numbers) {
+	public static int Add(String numbers) {
 		if(numbers.equals("")) {
 			return 0;
 		}
