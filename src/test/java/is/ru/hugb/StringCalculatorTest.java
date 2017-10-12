@@ -14,4 +14,9 @@ public class StringCalculatorTest {
 	public void testOneNumber() {
 		assertEquals(2, StringCalculator.Add("2"));
 	}
+
+	@Test
+    public void testAdding2Nums() {
+        assertEquals(7, StringCalculator.Add("2,5"));
+    }
 }
