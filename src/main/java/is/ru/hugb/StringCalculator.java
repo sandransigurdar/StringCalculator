@@ -9,10 +9,18 @@ public class StringCalculator {
 		else if(!numbers.contains(",")) {
             return Integer.parseInt(numbers);
         }
-        else if(numbers.length() == 3) {
+        else if(numbers.contains(",")) {
     		String nums[] = numbers.split(",");
-    		return Integer.parseInt(nums[0]) + Integer.parseInt(nums[1]);
+    		return sum(nums);
     	}
 		return 5;
 	}
+
+	private static int sum(String[] nums) {
+        int sum = 0;
+        for(String num : nums) {
+            sum += Integer.parseInt(num);
+        }
+        return sum;
+    }
 }
