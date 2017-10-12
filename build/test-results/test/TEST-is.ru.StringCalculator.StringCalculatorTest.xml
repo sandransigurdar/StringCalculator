@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="is.ru.StringCalculator.StringCalculatorTest" tests="6" skipped="0" failures="0" errors="0" timestamp="2017-10-12T18:59:17" hostname="DESKTOP-5UDP416" time="0.006">
+  <properties/>
+  <testcase name="testAdding2Nums" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.003"/>
+  <testcase name="testAddmultiple" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="testNegatives" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.001"/>
+  <testcase name="testEmptyStrResultZero" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="testAddEnterComma" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <testcase name="testOneNumber" classname="is.ru.StringCalculator.StringCalculatorTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
