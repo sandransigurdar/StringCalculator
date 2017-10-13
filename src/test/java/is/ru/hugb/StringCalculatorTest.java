@@ -44,4 +44,9 @@ public class StringCalculatorTest {
     public void testIgnore1000andlarger() {
     	assertEquals(2, StringCalculator.Add("1001,2"));
     }
+
+    @Test
+    public void testDeffDelimiter() {
+    	assertEquals(3, StringCalculator.Add("//;\n1;2"));
+    }
 }

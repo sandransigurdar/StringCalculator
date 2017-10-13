@@ -16,10 +16,21 @@ public static int Add(String numbers) {
         	}
         	else return num;
         }
+        else if(numbers.startsWith("//")) {
+        	
+        	String digits = numbers.replaceAll("\\D+", ",");
+        	
+        	String dig[] = digits.split(",");
+        	dig[0] = "0";
+        	
+        	return sum(dig);
+        	
+        }
         else if(numbers.contains(",") || numbers.contains("\n")) {
             String nums[] = numbers.split(",|\n");
             return sum(nums);
         }
+
         return 9;        
     }
 
